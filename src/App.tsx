@@ -1,10 +1,11 @@
 import React from 'react'
+import { BiAtom } from "react-icons/bi"
 
 function App() {
 
   return (
     <div className="App">
-      <i className='bx bx-lemon bx-lg' />
+      <BiAtom className="text-4xl inline-block" />
 
       <p>Ritem Mini</p>
 
