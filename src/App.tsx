@@ -11,7 +11,7 @@ function App() {
 
       <p>
         <em className="opacity-75 text-sm">
-          Opinionated Vite Starter Template
+        Opinionated React Vite Starter Template
         </em>
       </p>
 
