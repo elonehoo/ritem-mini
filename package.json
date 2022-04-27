@@ -1,7 +1,7 @@
 {
   "name": "ritem-mini",
   "packageManager": "pnpm@6.32.9",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite --port 3333 --open",
     "build": "vite build",
