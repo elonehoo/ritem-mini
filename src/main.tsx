@@ -1,13 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from '~/App'
+import { BrowserRouter } from "react-router-dom"
+import App from '~/pages/index'
 import Footer from '~/components/Footer'
-import '~/Index.css'
+import '~/style/Index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <main className="font-sans px-4 py-10 text-center gray-700 dark:gray-200">
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
       <Footer />
     </main>
   </React.StrictMode>
