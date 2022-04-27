@@ -1,5 +1,7 @@
 import React from 'react'
 import { BiAtom } from "react-icons/bi"
+import {useNavigate} from 'react-router-dom'
+
 
 class App extends React.Component<{}, {name: string}> {
 
@@ -14,6 +16,11 @@ class App extends React.Component<{}, {name: string}> {
     this.setState({
       name:even.target.value
     })
+  }
+
+  go = () =>{
+    const nav = useNavigate()
+    nav('/hi/'+this.state.name)
   }
 
   render(){
@@ -40,11 +47,11 @@ class App extends React.Component<{}, {name: string}> {
           type="text" />
   
         <div>
-            <button disabled={this.state.name.length <= 0 ? true : false} className="m-3 text-sm px-4 py-1 rounded inline-block bg-teal-600 text-white cursor-pointer hover:bg-teal-700 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50">
+            <button onClick={go} disabled={this.state.name.length <= 0 ? true : false} className="m-3 text-sm px-4 py-1 rounded inline-block bg-teal-600 text-white cursor-pointer hover:bg-teal-700 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50">
               Go
             </button>
         </div>
-  
+
       </div>
     )
   }
