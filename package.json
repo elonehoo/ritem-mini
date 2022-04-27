@@ -1,7 +1,6 @@
 {
   "name": "ritem-mini",
   "packageManager": "pnpm@6.32.9",
-  "type": "commonjs",
   "version": "0.0.1",
   "scripts": {
     "dev": "vite --port 3333 --open",
