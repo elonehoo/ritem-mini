@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite --port 3333 --open",
     "build": "vite build",
-    "preview": "vite preview --port 8766 --open"
+    "preview": "vite preview --port 8766 --open",
+    "test": "vitest"
   },
   "dependencies": {
     "react": "^18.0.0",
