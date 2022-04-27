@@ -1,30 +1,22 @@
-import React from 'react'
+import React,{useState,useCallback} from 'react'
 import { BiAtom } from "react-icons/bi"
 import {useNavigate} from 'react-router-dom'
 
+function App(){
 
-class App extends React.Component<{}, {name: string}> {
+  const [name,setName] = useState('')
 
-  constructor(props:any){
-    super(props)
-    this.state = {
-      name:''
-    }
+  const navigate = useNavigate()
+
+  const nameModel = useCallback((even:any) => {
+    setName(even.target.value)
+  }, [])
+
+  function go(){
+    navigate('/hi/'+name)
   }
 
-  nameModel = (even:any) =>{
-    this.setState({
-      name:even.target.value
-    })
-  }
-
-  go = () =>{
-    const nav = useNavigate()
-    nav('/hi/'+this.state.name)
-  }
-
-  render(){
-    return (
+  return (
       <div className="App">
         <BiAtom className="text-4xl inline-block" />
   
@@ -40,21 +32,20 @@ class App extends React.Component<{}, {name: string}> {
   
         <input 
           placeholder="What's your name?"
-          value={this.state.name}
-          onChange={this.nameModel}
+          value={name}
+          onChange={nameModel}
           className="px-4 py-2 w-64 text-center bg-transparent outline-none border rounded border-solid border-gray-200 dark:border-gray-700 active:outline-none"
           autoComplete="false"
           type="text" />
   
         <div>
-            <button onClick={go} disabled={this.state.name.length <= 0 ? true : false} className="m-3 text-sm px-4 py-1 rounded inline-block bg-teal-600 text-white cursor-pointer hover:bg-teal-700 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50">
+            <button onClick={go} disabled={name.length <= 0 ? true : false} className="m-3 text-sm px-4 py-1 rounded inline-block bg-teal-600 text-white cursor-pointer hover:bg-teal-700 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50">
               Go
             </button>
         </div>
 
       </div>
-    )
-  }
+  )
 }
 
 export default App
