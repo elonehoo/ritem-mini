@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 
-function All(){
+function All() {
   return (
     <div>
       Not Found
