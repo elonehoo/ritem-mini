@@ -3,7 +3,9 @@ import React from 'react'
 function Footer() {
 
   const dark = () => {
-    document.documentElement.classList.toggle('dark')
+    const isDark = document.documentElement.classList.toggle('dark')
+
+    localStorage.setItem('color-schema',isDark ? 'dark' : 'light')
   }
 
   return (
