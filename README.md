@@ -10,15 +10,17 @@
 
 - 🗂 Declarative routing for React
 
-- 🎨 [tailwindcss](https://github.com/tailwindlabs/tailwindcss) - A utility-first CSS framework for rapid UI development
+- 🎨 [UnoCSS](https://github.com/unocss/unocss) - The instant on-demand atomic CSS engine
 
-- 😃 [React Icons](https://github.com/react-icons/react-icons) - svg react icons of popular icon packs
+- 😃 [@unocss/preset-icons](https://github.com/unocss/unocss/tree/main/packages/preset-icons) - Use any icons with Pure CSS for UnoCSS.
 
 - 🔥 Use the React Hooks
 
 - ✅ Use Vitest for unit and components testing
 
 - 🦾 TypeScript, of course
+
+- ☁️ Deploy on GitHub Page
 
 ## Vscode
 
@@ -30,11 +32,13 @@
 
 ### UI Frameworks
 
-- [tailwindcss](https://github.com/tailwindlabs/tailwindcss) - A utility-first CSS framework for rapid UI development
+- [UnoCSS](https://github.com/unocss/unocss) - The instant on-demand atomic CSS engine.
 
 ### Icons
 
-- [React Icons](https://github.com/react-icons/react-icons) - svg react icons of popular icon packs
+- [Iconify](https://iconify.design/) - use icons from any icon sets 🔍[Icônes](https://icones.js.org)
+
+- [@unocss/preset-icons](https://github.com/unocss/unocss/tree/main/packages/preset-icons) - Use any icons with Pure CSS for UnoCSS.
 
 ## Try it now!
 
