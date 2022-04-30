@@ -5,7 +5,9 @@ import App from '~/pages/index'
 import Hi from '~/pages/hi/name'
 import All from '~/pages/all/all'
 import Footer from '~/components/Footer'
-import '~/style/Index.css'
+
+import '@unocss/reset/tailwind.css'
+import 'uno.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

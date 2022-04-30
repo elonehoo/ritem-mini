@@ -1,31 +1,17 @@
-import React, { useState } from 'react'
-import { BiMoon, BiSun } from 'react-icons/bi'
-import { GoMarkGithub } from 'react-icons/go'
-
-function icons(mode: boolean) {
-  if (mode)
-    return <BiMoon />
-
-  else
-    return <BiSun />
-}
+import React from 'react'
 
 function Footer() {
-  const [mode, setMode] = useState(false)
 
   const dark = () => {
-    const darkMode = document.documentElement.classList.toggle('dark')
-    setMode(darkMode)
+    document.documentElement.classList.toggle('dark')
   }
 
   return (
       <nav className="text-xl mt-6 inline-flex gap-2">
-        <button onClick={dark} className="text-[0.9em] inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out !outline-none hover:opacity-100 hover:text-teal-600">
-          {icons(mode)}
+        <button onClick={dark} className="icon-btn">
+          <div className="i-carbon-sun dark:i-carbon-moon" />
         </button>
-        <a href="https://github.com/elonehoo/ritem-mini" target="_blank" className="text-[0.9em] inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out !outline-none hover:opacity-100 hover:text-teal-600" rel="noreferrer">
-          <GoMarkGithub />
-        </a>
+        <a href="https://github.com/elonehoo/ritem-mini" target="_blank" className="icon-btn i-carbon-logo-github" rel="noreferrer" />
       </nav>
   )
 }
